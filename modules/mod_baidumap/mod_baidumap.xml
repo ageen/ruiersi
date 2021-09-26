@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="v.1.1" type="module" method="upgrade" client="site">
+	<name>Baidu Map</name>
+	<!--开发作者-->
+	<author>Saryven Hsian</author>
+	<!--创建日期-->
+	<creationDate>June 2017</creationDate>
+	<!--版权信息-->
+	<copyright>Copyright (C) 2017 Ecube Studio. All rights reserved.</copyright>
+	<!--软件许可证-->
+	<license>http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<!--开发作者邮箱-->
+	<authorEmail>e@e-cube.tech</authorEmail>
+	<!--开发作者主页-->
+	<authorUrl>http://e-cube.tech</authorUrl>
+	<!--版本号:每次发布新版本时，针对改动范围调整版本号。-->
+	<version>1.5.0</version>
+	<!--描述信息-->
+	<description><![CDATA[
+	<div class="description">
+	<p><strong>信息框内容修改对应字段值</strong></p>
+	<p>标题 - MOD_BAIDUMAP_FIELD_TITLE_VALUE</p>
+	<p>联系电话 - MOD_FOOTER_PHONE</p>
+	<p>公司地址 - MOD_FOOTER_ADDRESS</p>
+	<p>附加描述 - MOD_BAIDUMAP_FIELD_DESCRIBE_VALUE</p>
+	</div>
+	]]></description>
+	<files>
+		<!--包含模块代码文件-->
+		<filename module="mod_baidumap">mod_baidumap.php</filename>
+		<!--考虑安全风险，index.html应该包含在扩展的每个文件夹里-->
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<!--语言文件-->
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_baidumap.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.mod_baidumap.ini</language>
+	</languages>
+	<!--加入模块配置参数-->
+	<config>
+		<fields name="params">
+			<!--基本选项-->
+			<fieldset name="basic">
+				<field 
+					name="longtitude" 
+					type="text"
+					default="120.233245" 
+					label="MOD_BAIDUMAP_FIELD_LONGTITUDE" 
+				/>
+				<field 
+					name="latitude" 
+					type="text" 
+					default="28.805538" 
+					label="MOD_BAIDUMAP_FIELD_LATITUDE" 
+				/>
+			</fieldset>
+			<!--高级选项-->
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	<!--帮助文件-->
+	<help url="HELP_EXTENSIONS_MODULE_BAIDUMAP_URL"/>
+</extension>
